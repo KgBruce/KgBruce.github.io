@@ -1,487 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css" />
     <link rel="stylesheet" href="/css/style.css" />
 
     <title>Deep Wisdom New Data</title>
-  </head>
+</head>
 
-  <body>
+<body>
     <h5 style="display: flex; justify-content: center">新增数据</h5>
     <div class="container" style="margin-top: 1rem">
-      <ul class="list-group">
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-        >
-          <button
-            type="button"
-            class="btn btn-outline-info"
-            data-toggle="modal"
-            data-target="#new-account-apply"
-          >
+        <ul class="list-group">
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#new-account-apply">
             MySQL
           </button>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-        >
-          <button
-            type="button"
-            class="btn btn-outline-info"
-            data-toggle="modal"
-            data-target="#new-clearance-apply"
-          >
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#new-clearance-apply">
             AWS
           </button>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-        >
-          <button
-            type="button"
-            class="btn btn-outline-info"
-            data-toggle="modal"
-            data-target="#HDFS"
-          >
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-outline-info" data-toggle="modal" data-target="#HDFS">
             HDFS
           </button>
-        </li>
-        <li
-          class="list-group-item d-flex justify-content-between align-items-center"
-        >
-          <button
-            type="button"
-            class="btn btn-outline-info"
-            data-toggle="modal"
-            data-target="#aliyun"
-          >
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#aliyun">
             阿里云
           </button>
-        </li>
-      </ul>
-      <!-- Modal-HDFS -->
-      <div
-        class="modal fade"
-        id="HDFS"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">连接HDFS</h5>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#tencent">
+            腾讯云
+          </button>
+            </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+                <button type="button" class="btn btn-outline-success" data-toggle="modal" data-target="#huawei">
+            华为云
+          </button>
+            </li>
+        </ul>
+        <!-- Modal-HDFS -->
+        <div class="modal fade" id="HDFS" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">连接HDFS</h5>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="URL" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="文件所在目录（可选）" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-success" style="margin-top: 1rem; width: 40%">
+                        测试连接
+                      </button>
+                        <button type="button" class="btn btn-outline-primary" style="margin-top: 1rem; margin-left: 8rem; width: 20%">
+              提交
+            </button>
+                        <button type="button" class="btn btn-outline-danger" style="margin-top: 1rem; margin-left: 1rem; width: 20%">
+              取消
+            </button>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="URL"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="文件所在目录（可选）"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-dismiss="modal"
-              >
-                提交
-              </button>
-            </div>
-          </div>
         </div>
-      </div>
-      <!-- Modal account apply -->
-      <div
-        class="modal fade bd-example-modal-lg"
-        id="new-account-apply"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-dialog-centered modal-lg"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                连接MySQL数据库
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
+        <!-- Modal account apply -->
+        <div class="modal fade bd-example-modal-lg" id="new-account-apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            连接MySQL数据库
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
-            <div class="modal-body">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="数据库地址"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="端口"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">@</span>
-                </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="用户名"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleDropdownFormPassword1"
-                  placeholder="密码"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="数据库名称"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="编码格式"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <button
-                  type="button"
-                  class="btn btn-outline-primary"
-                  style="margin-top: 1rem; width: 100%"
-                >
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="数据库地址" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="端口" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="用户名" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="密码" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="数据库名称" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="编码格式（可选）" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="button" class="btn btn-outline-success" style="margin-top: 1rem; width: 40%">
+                            测试连接
+                          </button>
+                            <button type="button" class="btn btn-outline-primary" style="margin-top: 1rem; margin-left: 8rem; width: 20%">
                   提交
                 </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Modal account apply -->
-      <div
-        class="modal fade bd-example-modal-lg"
-        id="aliyun"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-dialog-centered modal-lg"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                连接阿里云数据库
-              </h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">&times;</span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="数据库地址"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">@</span>
+                            <button type="button" class="btn btn-outline-danger" style="margin-top: 1rem; margin-left: 1rem; width: 20%">
+                  取消
+                </button>
+                        </div>
+                    </div>
                 </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="用户名"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleDropdownFormPassword1"
-                  placeholder="密码"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="数据库名称"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="编码格式"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <button
-                  type="button"
-                  class="btn btn-outline-primary"
-                  style="margin-top: 1rem; width: 100%"
-                >
+            </div>
+        </div>
+        <!-- Modal account apply -->
+        <div class="modal fade bd-example-modal-lg" id="tencent" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            连接腾讯云MySQL数据库
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="内网（外网）地址" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="端口" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="用户名" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="密码" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="地区（可选）" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                数据库类型
+              </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">腾讯云 MySQL版</a>
+                                    <a class="dropdown-item" href="#">腾讯云 PostgreSQL版</a>
+                                    <a class="dropdown-item" href="#">腾讯云 SQL Server版</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="button" class="btn btn-outline-success" style="margin-top: 1rem; width: 40%">
+                            测试连接
+                          </button>
+                            <button type="button" class="btn btn-outline-primary" style="margin-top: 1rem; margin-left: 8rem; width: 20%">
                   提交
                 </button>
-              </div>
+                            <button type="button" class="btn btn-outline-danger" style="margin-top: 1rem; margin-left: 1rem; width: 20%">
+                  取消
+                </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-      <!-- Modal account apply -->
-      <div
-        class="modal fade bd-example-modal-lg"
-        id="new-clearance-apply"
-        tabindex="-1"
-        role="dialog"
-        aria-labelledby="exampleModalCenterTitle"
-        aria-hidden="true"
-      >
-        <div
-          class="modal-dialog modal-dialog-centered modal-lg"
-          role="document"
-        >
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">连接AWS数据库</h5>
-              <button
-                type="button"
-                class="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
+        <!-- Modal account apply -->
+        <div class="modal fade bd-example-modal-lg" id="huawei" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            连接华为云数据库
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="数据库地址" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="端口" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="用户名" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="密码" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="数据库名称（可选）" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                数据库类型
+              </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">华为云 MySQL版</a>
+                                    <a class="dropdown-item" href="#">华为云 PostgreSQL版</a>
+                                    <a class="dropdown-item" href="#">华为云 SQL Server版</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="button" class="btn btn-outline-success" style="margin-top: 1rem; width: 40%">
+                            测试连接
+                          </button>
+                            <button type="button" class="btn btn-outline-primary" style="margin-top: 1rem; margin-left: 8rem; width: 20%">
+                  提交
+                </button>
+                            <button type="button" class="btn btn-outline-danger" style="margin-top: 1rem; margin-left: 1rem; width: 20%">
+                  取消
+                </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal account apply -->
+        <div class="modal fade bd-example-modal-lg" id="aliyun" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">
+                            连接阿里云数据库
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
-            </div>
-            <div class="modal-body">
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="服务器地址"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="端口"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">@</span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="主机名/地址" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="端口" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="用户名" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="密码" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="数据库名称（可选）" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="编码格式（可选）" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  数据库类型
+                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">阿里云RDS MySQL版</a>
+                                    <a class="dropdown-item" href="#">阿里云RDS PostgreSQL版</a>
+                                    <a class="dropdown-item" href="#">阿里云RDS SQL Server版</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="button" class="btn btn-outline-success" style="margin-top: 1rem; width: 40%">
+                            测试连接
+                          </button>
+                            <button type="button" class="btn btn-outline-primary" style="margin-top: 1rem; margin-left: 8rem; width: 20%">
+                  提交
+                </button>
+                            <button type="button" class="btn btn-outline-danger" style="margin-top: 1rem; margin-left: 1rem; width: 20%">
+                  取消
+                </button>
+                        </div>
+                    </div>
                 </div>
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="用户名"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="数据库名称"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <input
-                  type="text"
-                  class="form-control"
-                  placeholder="地区"
-                  aria-label="Username"
-                  aria-describedby="basic-addon1"
-                />
-              </div>
-              <div class="input-group mb-3">
-                <div class="dropdown">
-                  <button
-                    class="btn btn-secondary dropdown-toggle"
-                    type="button"
-                    id="dropdownMenuButton"
-                    data-toggle="dropdown"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                  >
+            </div>
+        </div>
+        <!-- Modal account apply -->
+        <div class="modal fade bd-example-modal-lg" id="new-clearance-apply" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">连接AWS数据库</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="服务器地址" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="端口" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1">@</span>
+                            </div>
+                            <input type="text" class="form-control" placeholder="用户名" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="数据库名称" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" placeholder="地区" aria-label="Username" aria-describedby="basic-addon1" />
+                        </div>
+                        <div class="input-group mb-3">
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     数据库类型
                   </button>
-                  <div
-                    class="dropdown-menu"
-                    aria-labelledby="dropdownMenuButton"
-                  >
-                    <a class="dropdown-item" href="#">Aurora MySQL</a>
-                    <a class="dropdown-item" href="#">Aurora PostgreSQL </a>
-                  </div>
-                </div>
-              </div>
-              <div class="input-group mb-3">
-                <button
-                  type="button"
-                  class="btn btn-outline-primary"
-                  style="margin-top: 1rem; width: 100%"
-                >
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Amazon Aurora for MySQL</a>
+                                    <a class="dropdown-item" href="#">Amazon RDS for MySQL</a>
+                                    <a class="dropdown-item" href="#">Amazon Aurora PostgreSQL </a>
+                                    <a class="dropdown-item" href="#">Amazon RDS for PostgreSQL</a>
+                                    <a class="dropdown-item" href="#">Amazon Redshift</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group mb-3">
+                            <button type="button" class="btn btn-outline-success" style="margin-top: 1rem; width: 40%">
+                            测试连接
+                          </button>
+                            <button type="button" class="btn btn-outline-primary" style="margin-top: 1rem; margin-left: 8rem; width: 20%">
                   提交
                 </button>
-              </div>
+                            <button type="button" class="btn btn-outline-danger" style="margin-top: 1rem; margin-left: 1rem; width: 20%">
+                  取消
+                </button>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="modal-account-delete"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">删除账户</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">您确认要删除此账户？</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">
-              确认
-            </button>
-            <button type="button" class="btn btn-info">取消</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      class="modal fade"
-      id="modal-project-delete"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">删除项目</h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">您确认要删除此项目？</div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-danger" data-dismiss="modal">
-              确认
-            </button>
-            <button type="button" class="btn btn-info">取消</button>
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- Optional JavaScript -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="/js/bootstrap.min.js"></script>
-  </body>
+</body>
+
 </html>
